@@ -138,7 +138,7 @@ Style.css is empty, right now! Let's put some stuff in it.
   * Reference for independent work: https://www.freecodecamp.org/news/get-started-with-css-in-5-minutes-e0804813fc3e/
   * Tasks:
     * Add a rule to our body ruleset to change the color of all the text on the page
-    * Use a class selector to make the text in the <main> element 21 pixels in size
+    * Use a class selector to make the text in the `<main>` element 21 pixels in size
     * Use an ID selector to make the clock font 36 pixels in size
       * Oops! Now we have two rules that are trying to set the font size for the clock! Which one is working? Why do you think that is?
     * BONUS: Combine two element selectors to make the text in the paragraph in the footer 12 pixels
@@ -167,6 +167,53 @@ Style.css is empty, right now! Let's put some stuff in it.
                 font-size: 12px;
               }
 
-### Part 5: Adding More Content!
+### Part 5: Adding Content!
 
-#### Adding an Image
+#### Group Activity: Adding an Image
+
+We want to insert an image below the `<main>` element and above the `<footer>` element:
+```
+</main>
+
+<img id="lolcatImage" src="images/normalTime.jpg" alt="lolcat">
+
+<footer>
+```
+
+* Info on the image element can be found here: https://www.w3schools.com/tags/tag_img.asp
+* Inserting the image tag:
+  * We place the tag where we want the image
+  * Remember to start with the tag name: img
+  * Required attributes:
+    * src: Points to the image file
+    * alt: Text to display if the image can't load
+  * Optional attribute:
+    * id: We will use this to style the image with CSS, and to dynamically change the image with JavaScript!
+* Reload and check it out!
+
+#### Individual Activity: Adding a Blockquote
+
+Students will work individually to put a blockquote between the image and the footer:
+```
+<img id="lolcatImage" src="images/normalTime.jpg" alt="lolcat">
+
+<blockquote id="timeEvent">It's burrito time!</blockquote>
+
+<footer>
+```
+
+Student instructions:
+* Place a blockquote element below the image we just inserted, but above the footer
+* Add an ID attribute
+  * Remember that IDs must be unique!
+* Put some text in the element
+* Reload index.html -- you should see your new text underneath the photo!
+
+
+
+#### Individual Activity: The Box Model and Aligning
+
+There are two main ways to center content in CSS:
+
+1. Adding `text-align: center` to an element will center the content *inside that element*
+2. Adding `margin: auto` to an element will center that element *within its container*
