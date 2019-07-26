@@ -1,8 +1,17 @@
+# Warrior Way Coding Camp!
+
 This is the starting point for the 2019 Warrior Way Coding Camp at Brookwood School.
 
 Students will start with these files, and will build out the app until it has the functionality of the project in the "final" folder.
 
-Each step along the way has its own folder. This folder contains the project files, as they should be at the **completion** of the step: app.js, index.html, and style.css. It also contains the images needed for that step in the images sub-folder. Finally, there is a basic lesson plan for that step in the README file.
+Each step along the way has its own folder. This folder contains:
+* Project files, as they should be at the **completion** of the step
+  * app.js
+  * index.html
+  * style.css
+* Images needed for that step in the images sub-folder
+* A basic lesson plan for that step in the README file
+* Instructor resources in the resources sub-folder
 
 Instructor should:
 * Provide the starter files in this folder (but **not** this README) to students, as a starting point for the project.
