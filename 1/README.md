@@ -39,6 +39,22 @@ You will be able to customize your application, if you want to:
 * **Interactions:** Change what a user click does in the application
 * **Extensions:** After the course, you'll have your completed application, and you'll be able to add, edit, or change anything you like!
 
+What will we learn?
+* We will learn how to make a fully functional web application
+* We'll learn how to use three computer languages:
+  * HTML: The language of the internet, which structures content in web browsers
+  * CSS: A styling language used to style HTML content on the web
+  * JavaScript: A programming language used to control the interactive and dynamic components of a web app
+* We will learn how to use a text editor and Chrome developer tools
+* We will learn what version control is, and how to use it
+
+How will we do it?
+* We'll start with 3 files: an HTML file, a CSS file, and a JavaScript file
+* These files will already be linked together, and will have some basic functionality
+* We will use a text editor to edit the files
+* We will use an internet browser to view our app, and the browser's developer tools to find out what our app is doing
+* We will use the Terminal to manage Git (our version control tool)
+
 ### Part 2: What is a web app?
 
 **Watch Video: https://www.youtube.com/watch?v=D8c4JZW73cM**
@@ -53,7 +69,7 @@ Discussion Questions:
 4. What does a web browser do?
   * Interprets website code
 
-**Group Activity: HTML, CSS, and JavaScript**
+####Group Activity: HTML, CSS, and JavaScript
 
 Goal of the activity is to understand the roles of HTML, CSS, and JavaScript:
 * HTML provides the structure of the page
@@ -75,17 +91,81 @@ In the activity, we build a house!
   1. Where are the doors? How do they work?
   2. What are the various rooms for? (Bedrooms for sleeping, Kitchen for cooking, etc.)
 6. Conclude: JavaScript determines the **functionality** of the site. Just like you put a bed in the bedroom to enable sleeping, you use JavaScript to enable users to interact with the page or app.
+7. Show: Show the students the finished index.html in a browser, but disable the CSS and JavaScript. Then add back in the CSS and note the difference. Then add back in the JavaScript. It all works together!
 
-### Part 3: Setup
+### Part 3: Setup and Git
 
 On their own computers and with teacher guidance, students will:
 * Install Chrome (https://www.google.com/chrome/)
 * Install Atom (https://atom.io/)
-* Copy course starter files to their desktops
-* Open index.html in Chrome
-* Open the starter files in Atom
+* Install Git (https://git-scm.com/)
+* Download course starter .zip to Downloads
+
+#### Group Activity: Initializing a Project
+
+We will initialize the project -- from the command line!
+
+***Watch Video: https://www.youtube.com/watch?v=5XgBd6rjuDQ***  
+***Stop at ~7:15*** (after mkdir)
+
+Commands used:  
+`pwd`  
+`ls`  
+`cd`  
+`mkdir`  
+
+*Explain all steps as you go along: "pwd shows us what directory we're in," etc*
+* Open a terminal window (in Applications/Utilities)
+* Use `pwd` to confirm that you're in the home directory, and that there is a folder called Desktop
+* Use `cd Desktop` to switch to the desktop directory
+* Use `mkdir webapp` to make a new folder
+* Use `cd webapp` to move into the new folder
+* **New command!** Use `mv ~/Downloads/starter.zip .` to move the starter.zip file from the Downloads folder to the webapp folder
+  * Be sure to explain `~` and `.`
+* **New command!** Use `unzip starter.zip` to unzip the starter package
+* You should now have the starter project files in your webapp folder! One last thing:
+* We want to be able to open Chrome from the command line, but we currently can't. To do that, we need to update our *bash profile*, a file that contains special instructions where we can customize the code that runs in the Terminal, so...
+* Use `mv bash_profile ~/.bash_profile` to move the file to the proper place for the computer to see it
+  * Confirm that it works by quitting the terminal session, and then trying to open index.html from the command line in a new session
+
+#### Group Activity: Starting with Git
+
+***Watch video: https://www.youtube.com/watch?v=OqmSzXDrJBk***  
+*This talks about overall functionality of git, but basically all we'll use is the first part: the ability to commit and revert to a set point as needed*
+
+In Terminal:
+* Make sure you're in the webapp folder with `pwd`
+  * If you're not, get there with `cd`
+* Use `git init` to initialize a git repo
+* Use `git status` to see the status of the repo
+* Use `git add` to add the files you want to track
+  * `git add .` to add everything in the current folder
+  * `git add [file]` to add a single file
+* Use `git commit -m` to make an initial commit
+  * Don't forget a descriptive message!
+* Use `git status` to check that all changes have been committed
+* Use `git log` to see your commit!
+
+#### Individual Activity: Reverting uncommitted changes to a file
+
+* In terminal, use `atom .` from webapp directory to open all files in atom
+  * Welcome to atom! Brief intro.
+* In atom, make changes to index.html. Do whatever you want. Ruin it! Save your changes.
+* In terminal, use `git status` to see if git has noticed your changes.
+* But we don't want these changes! So how do we get them out of git?
+* To revert a single file, use `git checkout [file]`
+* Use `git status` to check if your changes were undone
+* Go back to atom -- are your changes still there?
+
+It is possible to revert committed changes, revert changes to multiple files, etc., but we won't go over that, now. Knowing how to undo breaking changes to files that you haven't yet committed is enough to get started, and I'll help you if you need to do more down the road!
+
 
 ### Part 4: Examining the starter code (HTML & CSS)
+
+In Terminal:
+* Use `chrome index.html` to open index.html in Chrome
+* Use `atom .` to open the starter files in Atom
+  * Brief review: index.html is content structure, style.css is presentation/style, and app.js is interactive/dynamic
 
 #### index.html
 
@@ -111,6 +191,8 @@ On their own computers and with teacher guidance, students will:
     * Our index.html document shows the HTML framework that we have written. The inspector shows the workings of the actual app, letting us see how CSS and JavaScript impact the HTML code. Let's do some styling and see what changes.
   * Individual activity: Make this YOUR project!
     * You're not the instructor, so why is the instructor's name in the footer? In Atom, change that text to your name, and save the document. In Chrome, reload the page to see your change!
+
+***Remember to check, add, and commit your work before moving on to the next part!***
 
 #### style.css
 
@@ -167,6 +249,8 @@ Style.css is empty, right now! Let's put some stuff in it.
                 font-size: 12px;
               }
 
+***Remember to check, add, and commit your work before moving on to the next part!***
+
 ### Part 5: Adding Content!
 
 #### Group Activity: Adding an Image
@@ -191,6 +275,8 @@ We want to insert an image below the `<main>` element and above the `<footer>` e
     * id: We will use this to style the image with CSS, and to dynamically change the image with JavaScript!
 * Reload and check it out!
 
+***Remember to check, add, and commit your work before moving on to the next part!***
+
 #### Individual Activity: Adding a Blockquote
 
 Students will work individually to put a blockquote between the image and the footer:
@@ -209,9 +295,15 @@ Student instructions:
 * Put some text in the element
 * Reload index.html -- you should see your new text underneath the photo!
 
+***Remember to check, add, and commit your work before moving on to the next part!***
 
+### Part 6: Styling!
 
-#### Individual Activity: The Box Model and Aligning
+#### Group Activity: Linking to External Stylesheets
+
+Font!
+
+#### Individual Activity: Styling Playtime!
 
 There are two main ways to center content in CSS:
 

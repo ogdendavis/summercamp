@@ -1,0 +1,5 @@
+echo "Current time: $(date)"
+echo "Logged in as" $USER
+
+#Alias to open Chrome from command line
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
