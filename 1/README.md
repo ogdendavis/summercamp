@@ -334,7 +334,7 @@ This is your chance to do what you like with the style of your project so far!
         git add
         git commit -m *[message]*
         git status
-        
+
 3. If you start something, then decide you don't want to do it after all, undo it with Git:
 
         git status
@@ -349,3 +349,22 @@ This is your chance to do what you like with the style of your project so far!
 3. Change background and text colors
 4. Replace the main image
 5. Add a link to your favorite website
+
+### Part 7: Wrap-up!
+
+What did we learn today?
+
+* What a web application is
+* How to use the command line and Git
+* The three languages of the internet and what they do:
+  * HTML
+  * CSS
+  * JavaScript
+* How to write three kinds of CSS selectors
+* *Lots* of CSS properties
+* How to add HTML elements to a page, including links to external stylesheets (fonts)
+
+What will we learn tomorrow?
+
+* More HTML and CSS
+* Making your app interactive with JavaScript!
