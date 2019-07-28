@@ -226,6 +226,7 @@ Style.css is empty, right now! Let's put some stuff in it.
     * BONUS: Combine two element selectors to make the text in the paragraph in the footer 12 pixels
       * BONUS BONUS: Also make all the text in the paragraph in the footer uppercase!
   * Solutions:
+
               body {
                 background-color: #f16059;
                 color: #222;
@@ -301,11 +302,50 @@ Student instructions:
 
 #### Group Activity: Linking to External Stylesheets
 
-Font!
+* Check out https://fonts.google.com/
+  * Brief explanation of page
+* Find Bungee Shade font
+  * Explain page -- esp. 'Select this font' button and 'popular pairings'
+* Add Bungee Shade and Bungee, show how to copy code
+* Ask: Where does this code go?
+  * index.html header!
+  * Preference: before our individual stylesheet
+* In style.css (talk through whole process):
+  * Add `font-family: 'Bungee';` to `body` ruleset
+    * Show what happens: Everything is Bungee!
+  * Add ruleset for `h1` with `font-family: 'Bungee Shade';`
+    * Show what happens: `h1` is Bungee Shade!
+    * Demonstrate what happens when making a bad declaration: `h1` is no longer Bungee Shade -- it's the default font!
+    * Show fallbacks
+
+***GIT COMMIT!***
 
 #### Individual Activity: Styling Playtime!
 
-There are two main ways to center content in CSS:
+This is your chance to do what you like with the style of your project so far!
 
-1. Adding `text-align: center` to an element will center the content *inside that element*
-2. Adding `margin: auto` to an element will center that element *within its container*
+**Rules to follow:**
+
+1. Only work in index.html and style.css  
+*Don't worry, we'll play with app.js tomorrow!*
+2. Make a Git commit after every successful change:
+
+        git status
+        git add
+        git commit -m *[message]*
+        git status
+        
+3. If you start something, then decide you don't want to do it after all, undo it with Git:
+
+        git status
+        git checkout *[file to revert]*
+        git status
+
+**Ideas for what to do with your app:**
+
+1. Align content on the page  
+*Google 'center content with css'*
+2. Pick out other fonts you like, and/or change fonts of other parts of the page
+3. Change background and text colors
+4. Replace the main image
+5. Add a link to your favorite website

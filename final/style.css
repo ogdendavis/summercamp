@@ -16,19 +16,18 @@ header {
   line-height: 48px;
 }
 
+h1 {
+  font-family: 'Bungee Shade', 'Bungee', Helvetica, Arial, sans-serif;
+}
+
 .time {
   font-size: 21px;
-  font-family: 'Bungee', cursive;
 }
 
 #clock {
   font-size: 36px;
   display: block;
   padding: 5px 0px;
-}
-
-h1, h2, h3, h6 {
-  font-family: 'Bungee Shade', cursive;
 }
 
 #lolcatImage {
